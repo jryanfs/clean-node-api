@@ -3,7 +3,7 @@ const MissingParamError = require('../helpers/missingParamError')
 const InvalidParamError = require('../helpers/invalidParamError')
 
 module.exports = class LoginRouter {
-  constructor (authUseCase, emailValidator, passwordValidator) {
+  constructor (authUseCase, emailValidator) {
     this.authUseCase = authUseCase
     this.emailValidator = emailValidator
   }

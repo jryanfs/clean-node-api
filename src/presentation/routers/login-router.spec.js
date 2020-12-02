@@ -7,12 +7,14 @@ const InvalidParamError = require('../helpers/invalidParamError')
 const makeSut = () => {
   const authUseCaseSpy = makeAuthUseCaseSpy()
   const emailValidatorSpy = makeEmailValidator()
+  const emailValidatorError = makeEmailValidatorError()
   authUseCaseSpy.accessToken = 'valid_token'
   const sut = new LoginRouter(authUseCaseSpy, emailValidatorSpy)
   return {
     sut,
     authUseCaseSpy,
-    emailValidatorSpy
+    emailValidatorSpy,
+    emailValidatorError
   }
 }
 

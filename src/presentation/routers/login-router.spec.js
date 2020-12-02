@@ -36,7 +36,6 @@ const makeEmailValidatorError = () => {
       throw new Error()
     }
   }
-
   return new EmailValidatorSpy()
 }
 
